@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+    <%- include("./partials/head.html") %>
+  </head>
+  <body>
+    <%- include("./partials/nav.html") %>
+    <main>
+      <div class="form">
+        <form action="#">
+          <div class="title">
+            <h2>Envianos un mensaje</h2>
+          </div>
+          <div class="input">
+            <input type="text" required />
+            <label for="#">Nombre</label>
+          </div>
+          <div class="input">
+            <input type="text" required />
+            <label for="#">Apellido</label>
+          </div>
+          <div class="input">
+            <input type="text" required />
+            <label for="#">Correo electrónico</label>
+          </div>
+          <div class="input">
+            <input type="text" required />
+            <label for="#">Asunto</label>
+          </div>
+          <div class="input">
+            <textarea required></textarea>
+            <label for="#">Mensaje</label>
+          </div>
+          <button class="btn">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <%- include("./partials/footer.html") %>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=PT+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Mono", monospace;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+/*---- body ----*/
+body {
+  font-size: 16px;
+  background: rgb(248, 249, 249);
+  color: rgb(33, 33, 33);
+}
+/*---- container ----*/
+.container {
+  width: 96%;
+  margin: auto;
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 80%;
+  }
+}
+/*---- nav ----*/
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(253, 253, 254);
+  z-index: 4;
+}
+.nav .container {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .title h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  color: rgb(3, 169, 244);
+}
+.nav .ul {
+  display: flex;
+  gap: 24px;
+}
+.ul .li {
+  list-style: none;
+  position: relative;
+}
+.li a {
+  color: rgb(33, 33, 33);
+}
+.categories ul {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 240px;
+  padding: 0 8px;
+  background: rgb(253, 253, 254);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+.categories ul li {
+  list-style: none;
+  margin: 16px 0;
+}
+.categories ul.active {
+  opacity: 2;
+  visibility: visible;
+}
+/*---- index ----*/
+/*---- header ----*/
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -4;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -2;
+}
+.header .container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.text h2 {
+  font-size: 48px;
+  color: rgb(253, 253, 254);
+  text-align: center;
+}
+.text h2 p {
+  margin-top: 24px;
+  font-size: 32px;
+  color: rgb(208, 211, 212);
+}
+.text .btn {
+  display: block;
+  padding: 16px;
+  color: rgb(33, 33, 33);
+  background: rgb(3, 169, 244);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+/*---- section ----*/
+.section .title {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .title h4 {
+  font-family: "Dancing Script", cursive;
+  font-size: 42px;
+}
+/*---- games ----*/
+.games .container {
+  padding: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+.games .game {
+  position: relative;
+  width: 280px;
+  height: 320px;
+  padding: 16px;
+  background: rgb(248, 249, 249);
+  border: 1px solid rgb(3, 169, 244);
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+}
+.game:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+.game img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.game .title_game {
+  position: absolute;
+  bottom: 8px;
+  left: -8px;
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  background: rgb(3, 169, 244);
+}
+.title_game p {
+  color: rgb(33, 33, 33);
+}
+/*---- nosotros ----*/
+.nosotros .container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 24px;
+  padding: 16px 0;
+  align-items: center;
+}
+.nosotros .img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+/*---- footer ----*/
+.footer {
+  width: 100%;
+  background: rgb(33, 33, 33);
+}
+.footer .container {
+  height: 128px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer p {
+  color: rgb(253, 253, 254);
+}
+.footer ul {
+  display: flex;
+  gap: 24px;
+}
+.footer ul li {
+  list-style: none;
+}
+.footer ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(3, 169, 244);
+}
+.footer ul li a i {
+  font-size: 24px;
+}
+/*----*/
+/*---- contactanos ----*/
+.form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, rgb(3, 169, 244), rgb(33, 33, 33));
+}
+.form form {
+  width: 480px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: rgb(253, 253, 254);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+form .title h2 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 48px;
+}
+form .input {
+  position: relative;
+}
+.input input,
+.input textarea {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid rgb(208, 211, 212);
+  outline: none;
+}
+.input textarea {
+  height: 128px;
+  resize: none;
+}
+.input label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  background: rgb(253, 253, 254);
+  transition: all 0.2s ease-in-out;
+}
+.input:nth-child(6) label {
+  top: 16px;
+  transform: none;
+  transition: all 0.2s ease-in-out;
+}
+.input input:focus,
+.input input:valid,
+.input textarea:focus,
+.input textarea:valid {
+  border-color: rgb(3, 169, 244);
+}
+.input input:focus ~ label,
+.input input:valid ~ label,
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  top: 0;
+  color: rgb(3, 169, 244);
+}
+.input:nth-child(6) textarea:focus ~ label,
+.input:nth-child(6) textarea:valid ~ label {
+  transform: translateY(-50%);
+}
+form .btn {
+  display: block;
+  width: 40%;
+  margin: auto;
+  padding: 16px 0;
+  font-size: 16px;
+  background: rgb(3, 169, 244);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
